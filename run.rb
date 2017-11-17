@@ -1,40 +1,4 @@
-class SitterCalculator
-  attr_reader :startTime, :bedTime, :endTime
+require './controller'
 
-  def initialize(startTime, bedTime, endTime)
-    @startTime = startTime
-    @bedTime = bedTime
-    @endTime = endTime
-  end
-
-  def getNightlyCharge
-    return (startToBed + bedToMidnight + midnightToEnd)
-  end
-
-private
-  def startToBed
-    (@bedTime - @startTime) * 12
-  end
-
-  def bedToMidnight
-    if @endTime > 4
-      return (@endTime - @bedTime) * 8
-    else
-      return (12 - @bedTime) * 8
-    end
-  end
-
-  def midnightToEnd
-    if @endTime > 4
-      return 0
-    else
-      (@endTime) * 16
-    end
-  end
-end
-
-##view
-
-def sitterQuestionaire
-  
-end
+calc = SitterCalculator.new(sitterQuestionaire)
+p "Tonight's total will be: $#{calc.getNightlyCharge}"
