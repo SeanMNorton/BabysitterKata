@@ -17,7 +17,7 @@ private
   end
 
   def bedToMidnight
-    if @endTime < 12
+    if @endTime > 4
       return (@endTime - @bedTime) * 8
     else
       return (12 - @bedTime) * 8
@@ -25,11 +25,16 @@ private
   end
 
   def midnightToEnd
-    if @endTime < 12
+    if @endTime > 4
       return 0
     else
-      (@endTime - 12) * 16
+      (@endTime) * 16
     end
   end
+end
 
+##view
+
+def sitterQuestionaire
+  
 end
