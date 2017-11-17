@@ -54,7 +54,18 @@ def sitterQuestionaire
   def getBedTime
     print "Bed Time: "
     bedTime = gets.chomp.to_i
+    if bedTime <= 12 && bedTime > 4
+      return bedTime
+    else
+      puts "Your kid needs to be in bed by midnight!!"
+      getBedTime
+    end
   end
 
-  return [getStartTime, 9 , 1]
+  def getEndTime
+    print "End Time: "
+    endTime = gets.chomp.to_i
+  end
+
+  return [getStartTime, getBedTime , getEndTime]
 end
