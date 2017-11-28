@@ -2,16 +2,15 @@
 
 
 ## Getting Started
-Download or clone the project.
-From the Terminal Run:
-`ruby run.rb`
-Enter in times when prompted 
+* Download or clone the project.
+* From the Terminal Run: `ruby run.rb`
+* Enter in times when prompted 
 
 ### Prerequisites
 Install [Ruby](https://www.ruby-lang.org/en/downloads/)
 
 ## Running the tests
-To run the tests, from the terminal run:
+* From the terminal run:
 `rspec tests.rb`
 
 
